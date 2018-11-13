@@ -16,9 +16,7 @@
             </array>
           </option>
           <option name="pluginClasspaths">
-            <array>
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.0/87970b36b9e1855d0d0e4942865f63a1015026c9/kotlin-android-extensions-1.3.0.jar" />
-            </array>
+            <array />
           </option>
           <option name="multiPlatform" value="true" />
         </compilerArguments>
@@ -34,5 +32,14 @@
     <orderEntry type="jdk" jdkName="Kotlin SDK" jdkType="KotlinSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client:1.0.0-beta-4" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:atomicfu-common:0.11.12" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-io:0.1.0-beta-2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.0-beta-2" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-core:1.0.0-beta-4" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-http:1.0.0-beta-4" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-utils:1.0.0-beta-4" level="project" />
   </component>
 </module>

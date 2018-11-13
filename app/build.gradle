@@ -39,6 +39,7 @@ dependencies {
     implementation "io.ktor:ktor-client-android:1.0.0-beta-4"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.0"
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
 
 kotlin {

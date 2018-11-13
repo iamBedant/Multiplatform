@@ -5,23 +5,23 @@
     build-mode="FULL"
     density="420dpi"
     format="10"
-    plugin-version="3.2.0"
-    timestamp="1542091014697"
+    plugin-version="3.2.1"
+    timestamp="1542100856644"
     token="-5822324816996732541"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1489" />
+        duration="3223" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="185" />
+        duration="134" />
     <task
         name="verifier"
-        duration="126" />
+        duration="118" />
 
     <artifact
         location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
@@ -33,19 +33,19 @@
         location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
         location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
         location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
@@ -65,7 +65,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1542091014697"
+        timestamp="1542100856644"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
@@ -77,19 +77,19 @@
             location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/Users/kuliza/Documents/Github/KMP/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
