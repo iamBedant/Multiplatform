@@ -2,7 +2,10 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url "http://kotlin.bintray.com/kotlin-eap" }
+        maven { url "http://kotlin.bintray.com/kotlin-dev" }
         maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url 'https://dl.bintray.com/jetbrains/kotlin-native-dependencies' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
@@ -11,7 +14,13 @@ buildscript {
     }
 }
 repositories {
-
+    maven { url "http://kotlin.bintray.com/kotlin-eap" }
+    maven { url "http://kotlin.bintray.com/kotlin-dev" }
+    maven { url "https://kotlin.bintray.com/kotlinx" }
+    maven { url "https://dl.bintray.com/kotlin/ktor" }
+    maven { url "https://dl.bintray.com/sargunster/maven" }
+    maven { url "https://dl.bintray.com/kotlin/squash" }
+    maven { url = 'https://dl.bintray.com/russhwolf/multiplatform-settings' }
     google()
     jcenter()
 }

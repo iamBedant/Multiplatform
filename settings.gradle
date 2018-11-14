@@ -8,5 +8,5 @@ pluginManagement {
     }
 }
 rootProject.name = 'KMP'
-
+enableFeaturePreview('GRADLE_METADATA')
 include ':app'
