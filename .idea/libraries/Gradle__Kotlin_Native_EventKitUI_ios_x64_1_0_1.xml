@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: Kotlin/Native:EventKitUI:ios_x64:1.0.1">
-    <CLASSES>
-      <root url="file://$USER_HOME$/.konan/kotlin-native-macos-1.0.1/klib/platform/ios_x64/EventKitUI" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

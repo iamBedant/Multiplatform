@@ -80,6 +80,7 @@ kotlin {
         iosMain {
             dependencies {
                 implementation "io.ktor:ktor-client-ios:1.0.0-beta-4"
+                implementation "io.ktor:ktor-client-core-ios:1.0.0-beta-4"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.0.0"
                 implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.0"
             }
