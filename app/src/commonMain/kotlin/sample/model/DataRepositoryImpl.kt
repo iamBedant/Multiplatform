@@ -23,8 +23,8 @@ class DataRepositoryImpl : DataRepository {
             throw UpdateProblem()
         }
 
-        val result = AllData(JsonTreeParser(data).read().jsonObject["name"].content)
-        this.data = result
+//        val result = AllData(JsonTreeParser(data).read().jsonObject["name"].content)
+//        this.data = result
 
     }
 

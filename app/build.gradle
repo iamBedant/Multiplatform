@@ -38,7 +38,6 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
     implementation "io.ktor:ktor-client-android:1.0.0-beta-4"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.0"
     implementation 'com.jakewharton.timber:timber:4.7.1'
 }
 
@@ -56,6 +55,7 @@ kotlin {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
                 implementation "io.ktor:ktor-client:1.0.0-beta-4"
+                implementation "io.ktor:ktor-client-json:1.0.0-beta-4"
                 implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.9.0"
             }
         }
@@ -68,7 +68,9 @@ kotlin {
         androidMain {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib'
-
+                implementation "io.ktor:ktor-client-core-jvm:1.0.0-beta-4"
+                implementation "io.ktor:ktor-client-json-jvm:1.0.0-beta-4"
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.0"
             }
         }
         androidTest {
@@ -81,8 +83,9 @@ kotlin {
             dependencies {
                 implementation "io.ktor:ktor-client-ios:1.0.0-beta-4"
                 implementation "io.ktor:ktor-client-core-ios:1.0.0-beta-4"
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.0.0"
+                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.0.1"
                 implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.0"
+                implementation "io.ktor:ktor-client-json-ios:1.0.0-beta-4"
             }
         }
         iosTest {
