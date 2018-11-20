@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
+import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import sample.model.DataRepositoryImpl
 import sample.presentation.MainPresenter
@@ -12,12 +14,33 @@ import timber.log.Timber
 import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity(), MainView {
-    override var isUpdating: Boolean by Delegates.observable(false) { _, _, isUpdating ->
-        Timber.d(isUpdating.toString())
+
+    override fun showLoader() {
+        pb.show()
+        tvBio.hide()
+        tvName.hide()
+        tvGists.hide()
+        tvRepos.hide()
+        ivAvatar.hide()
     }
-    lateinit var tvName: TextView
-    override fun displayData(data: AllData) {
-        tvName.text = data.name
+
+    override fun hideLoader() {
+        pb.hide()
+        tvBio.show()
+        tvName.show()
+        tvGists.show()
+        tvRepos.show()
+        ivAvatar.show()
+    }
+
+    override fun displayData(data: DisplayData) {
+        with(data) {
+            tvName.text = name
+            Glide.with(this@MainActivity).load(avatarUrl).into(ivAvatar)
+            tvRepos.text = publicRepos
+            tvGists.text = publicGists
+            tvBio.text = bio
+        }
     }
 
     override fun showError(error: Throwable) {
@@ -26,16 +49,13 @@ class MainActivity : AppCompatActivity(), MainView {
         }
     }
 
-
-    private val repository by lazy { DataRepositoryImpl() }
-
-    private val presenter by lazy { MainPresenter(this, repository) }
+    private val presenter by lazy { MainPresenter(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tvName = findViewById(R.id.tvName)
-        presenter.loadData("iamBedant")
-
+        fabGo.setOnClickListener {
+            presenter.loadData(etUserName.text.toString())
+        }
     }
 }

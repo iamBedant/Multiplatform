@@ -3,18 +3,22 @@ import app
 
 class ViewController: UIViewController, MainView {
     
-    func displayData(data: AllData) {
+    func showLoader() {
+        
+    }
+    
+    func hideLoader() {
+        
+    }
+    
+    func displayData(data: DisplayData) {
         label.text = data.name
     }
     
     var isUpdating: Bool = false
     
-    let repository = DataRepositoryImpl()
-    
     lazy var presenter : MainPresenter = {
-        MainPresenter(
-        view: self,
-        repository: repository)
+        MainPresenter(view: self)
     }()
     
     override func viewDidLoad() {
