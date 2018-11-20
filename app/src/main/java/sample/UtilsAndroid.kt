@@ -1,5 +1,7 @@
 package sample
 
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import timber.log.Timber
 
 /**
@@ -21,4 +23,8 @@ actual object Log{
     actual fun e(error: Throwable) {
         Timber.e(error)
     }
+}
+
+actual fun getMainDispetcher(): CoroutineDispatcher {
+    return Dispatchers.Main
 }

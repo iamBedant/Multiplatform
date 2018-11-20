@@ -30,7 +30,7 @@ class NetworkApi(private val endPoint: String) {
         url {
             protocol = URLProtocol.HTTPS
             host = "api.github.com"
-            encodedPath = "users/iamBedant"
+            encodedPath = "users/$userId"
         }
     }
 

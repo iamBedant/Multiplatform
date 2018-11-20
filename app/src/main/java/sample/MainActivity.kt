@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
     private val repository by lazy { DataRepositoryImpl() }
 
-    private val presenter by lazy { MainPresenter(Dispatchers.Main, this, repository) }
+    private val presenter by lazy { MainPresenter(this, repository) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

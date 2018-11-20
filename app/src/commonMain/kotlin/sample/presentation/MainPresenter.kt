@@ -1,17 +1,16 @@
 package sample.presentation
 
 import sample.Log
+import sample.getMainDispetcher
 import sample.launchAndCatch
 import kotlin.coroutines.CoroutineContext
 
 /**
  * Created by @iamBedant on 13/11/18.
  */
-class MainPresenter(
-    private val uiContext: CoroutineContext,
-    private val view: MainView,
-    private val repository: DataRepository
-) {
+class MainPresenter(private val view: MainView, private val repository: DataRepository) {
+
+    private val uiContext = getMainDispetcher()
 
     fun loadData(userName: String) {
         launchAndCatch(uiContext, view::showError) {
@@ -24,7 +23,7 @@ class MainPresenter(
 
     private fun showData() {
         val userInfo = repository.data
-        if(userInfo==null){
+        if (userInfo == null) {
             Log.d("data is null")
         }
 

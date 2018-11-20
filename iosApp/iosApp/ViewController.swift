@@ -4,17 +4,22 @@ import app
 class ViewController: UIViewController, MainView {
     
     func displayData(data: AllData) {
-        <#code#>
+        label.text = data.name
     }
     
     var isUpdating: Bool = false
     
     let repository = DataRepositoryImpl()
-//    let presenter = MainPresenter()
+    
+    lazy var presenter : MainPresenter = {
+        MainPresenter(
+        view: self,
+        repository: repository)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        label.text = Proxy().proxyHello()
+        presenter.loadData(userName: "iamBedant")
     }
 
     override func didReceiveMemoryWarning() {

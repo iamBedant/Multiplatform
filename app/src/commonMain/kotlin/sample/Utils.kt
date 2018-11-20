@@ -1,5 +1,7 @@
 package sample
 
+import kotlinx.coroutines.CoroutineDispatcher
+
 /**
  * Created by @iamBedant on 13/11/18.
  */
@@ -10,3 +12,5 @@ expect object Log{
     fun e(message: String)
     fun i(message: String)
 }
+
+expect fun getMainDispetcher(): CoroutineDispatcher
