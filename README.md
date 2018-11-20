@@ -2,7 +2,7 @@
 ## Kotlin Multiplatform Project (Android/ iOS)
 
 ### Goals
-* Share Business Logic between all platforms.
+* Share business logic between all platforms.
 
 ### Non-Goals
 * Architecture / UI
