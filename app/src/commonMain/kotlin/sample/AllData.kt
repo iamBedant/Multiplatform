@@ -9,10 +9,10 @@ import kotlinx.serialization.*
 
 @Serializable
 data class AllData(
-    val avatar_url: String,
-    val bio: String,
+    val avatar_url: String?,
+    val bio: String?,
     val blog: String,
-    val company: String,
+    val company: String?,
     val created_at: String,
     val email:String?,
     val events_url: String,
@@ -22,12 +22,12 @@ data class AllData(
     val following_url: String,
     val gists_url: String,
     val gravatar_id: String,
-    val hireable: Boolean,
+    val hireable: Boolean?,
     val html_url: String,
     val id: Int,
-    val location: String,
+    val location: String?,
     val login: String,
-    val name: String,
+    val name: String?,
     val node_id: String,
     val organizations_url: String,
     val public_gists: Int,
@@ -39,5 +39,13 @@ data class AllData(
     val subscriptions_url: String,
     val type: String,
     val updated_at: String,
-    val url: String
+    val url: String?
+)
+
+data class DisplayData(
+    val name:String,
+    val publicRepos:String,
+    val publicGists:String,
+    val bio: String,
+    val avatarUrl :String
 )
