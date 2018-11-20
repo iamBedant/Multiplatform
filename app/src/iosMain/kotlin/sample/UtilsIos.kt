@@ -1,5 +1,11 @@
 package sample
 
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Runnable
+import platform.Foundation.NSRunLoop
+import platform.Foundation.performBlock
+import kotlin.coroutines.CoroutineContext
+
 /**
  * Created by @iamBedant on 13/11/18.
  */
@@ -18,4 +24,16 @@ actual object Log {
     actual fun e(error: Throwable) {
         print(error)
     }
+}
+
+object MainLoopDispatcher: CoroutineDispatcher() {
+    override fun dispatch(context: CoroutineContext, block: Runnable) {
+        NSRunLoop.mainRunLoop().performBlock {
+            block.run()
+        }
+    }
+}
+
+actual fun getMainDispetcher(): CoroutineDispatcher {
+    return MainLoopDispatcher
 }
