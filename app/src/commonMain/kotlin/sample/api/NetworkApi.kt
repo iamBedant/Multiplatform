@@ -26,26 +26,13 @@ class NetworkApi(private val endPoint: String) {
         install(ExpectSuccess)
     }
 
-    suspend fun getAll(userId: String): String = httpClient.get {
+    suspend fun getAll(userId: String): AllData = httpClient.get {
         url {
             protocol = URLProtocol.HTTPS
             host = "api.github.com"
             encodedPath = "users/iamBedant"
         }
     }
-
-
-
-//    private val client = HttpClient()
-
-
-//    suspend fun getAll(userId: String): String = client.get {
-//        url {
-//            protocol = URLProtocol.HTTPS
-//            host = "api.github.com"
-//            encodedPath = "users/iamBedant"
-//        }
-//    }
 
 
     private fun HttpRequestBuilder.json() {
