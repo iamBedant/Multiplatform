@@ -1,7 +1,17 @@
 import UIKit
 import app
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MainView {
+    
+    func displayData(data: AllData) {
+        <#code#>
+    }
+    
+    var isUpdating: Bool = false
+    
+    let repository = DataRepositoryImpl()
+//    let presenter = MainPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        label.text = Proxy().proxyHello()

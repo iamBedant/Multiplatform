@@ -1,5 +1,6 @@
 package sample.presentation
 
+import sample.Log
 import sample.launchAndCatch
 import kotlin.coroutines.CoroutineContext
 
@@ -23,6 +24,10 @@ class MainPresenter(
 
     private fun showData() {
         val userInfo = repository.data
+        if(userInfo==null){
+            Log.d("data is null")
+        }
+
         userInfo?.let {
             view.displayData(it)
         }

@@ -5,7 +5,7 @@ import timber.log.Timber
 /**
  * Created by @iamBedant on 13/11/18.
  */
-actual class Log{
+actual object Log{
     actual fun d(message: String) {
         Timber.d(message)
     }
@@ -16,5 +16,9 @@ actual class Log{
 
     actual fun i(message: String) {
         Timber.i(message)
+    }
+
+    actual fun e(error: Throwable) {
+        Timber.e(error)
     }
 }

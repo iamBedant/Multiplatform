@@ -3,7 +3,7 @@ package sample
 /**
  * Created by @iamBedant on 13/11/18.
  */
-actual class Log {
+actual object Log {
     actual fun d(message: String) {
         print(message)
     }
@@ -13,5 +13,9 @@ actual class Log {
 
     actual fun i(message: String) {
         print(message)
+    }
+
+    actual fun e(error: Throwable) {
+        print(error)
     }
 }

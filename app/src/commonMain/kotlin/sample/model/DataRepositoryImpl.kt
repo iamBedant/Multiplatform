@@ -1,8 +1,10 @@
 package sample.model
 
+import kotlinx.serialization.json.JSON
 import kotlinx.serialization.json.JsonTreeParser
 import kotlinx.serialization.json.content
 import sample.AllData
+import sample.Log
 import sample.api.NetworkApi
 import sample.api.UpdateProblem
 import sample.presentation.DataRepository
@@ -20,11 +22,12 @@ class DataRepositoryImpl : DataRepository {
         val data = try {
             api.getAll(username)
         } catch (cause: Throwable) {
+            Log.e(cause)
+
             throw UpdateProblem()
         }
 
-        val result = AllData(JsonTreeParser(data).read().jsonObject["name"].content)
-        this.data = result
+        this.data = data
 
     }
 
