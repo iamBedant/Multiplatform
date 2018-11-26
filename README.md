@@ -1,3 +1,4 @@
+
 # \[ 🚧 Work in progress 👷‍♀️⛏👷🔧️👷🔧 🚧 \] 
 ## Kotlin Multiplatform Project (Android/ iOS)
 
@@ -20,3 +21,7 @@
 * Run `./gradlew run` on root directory.
 * Open `iosApp` project in **Xcode**
 * Run the project.
+
+## TODO
+* Add `HttpClient` logging. [https://github.com/ktorio/ktor/issues/722]()
+* Add common db Support.
