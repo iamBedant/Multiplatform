@@ -1,10 +1,17 @@
 
-# \[ 🚧 Work in progress 👷‍♀️⛏👷🔧️👷🔧 🚧 \] 
-## Kotlin Multiplatform Project (Android/ iOS)
+# Kotlin Multiplatform Project (Android/ iOS)
+## \[ 🚧 Work in progress 👷‍♀️⛏👷🔧️👷🔧 🚧 \] 
+
+Android           | iOS
+:-------------------------:|:-------------------------:
+![](https://cdn-images-1.medium.com/max/1600/1*IObkWN_iHaK9VWzE6NOZ5A.gif)  |  ![](https://cdn-images-1.medium.com/max/1600/1*ar5dtKKjUlOr_JmxZm04hw.gif)
+
+
 
 ### Goals
 
 * Share business logic between all platforms.
+
 
 ### Non-Goals
 
