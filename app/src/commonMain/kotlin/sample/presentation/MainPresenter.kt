@@ -1,23 +1,17 @@
 package sample.presentation
 
-import sample.DisplayData
-import sample.Log
-import sample.getMainDispetcher
-import sample.launchAndCatch
+import sample.*
 import sample.model.DataRepositoryImpl
 import kotlin.coroutines.CoroutineContext
 
 /**
  * Created by @iamBedant on 13/11/18.
  */
-class MainPresenter(private val view: MainView) {
-
-    private val uiContext = getMainDispetcher()
-    private val repository = DataRepositoryImpl()
+class MainPresenter(private val view: MainView, private val repository: DataRepository, private val uiContext: CoroutineContext) {
 
     fun loadData(userName: String) {
         if (userName.isNullOrEmpty()) {
-            view.showError(Throwable("Please enter a valid user name"))
+            view.showError(USER_NAME_NOT_VALID)
         } else {
             view.showLoader()
             launchAndCatch(uiContext, view::showError) {

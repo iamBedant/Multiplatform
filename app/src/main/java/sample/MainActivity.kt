@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
+import sample.R.id.*
 import sample.model.DataRepositoryImpl
 import sample.presentation.MainPresenter
 import sample.presentation.MainView
@@ -43,13 +44,13 @@ class MainActivity : AppCompatActivity(), MainView {
         }
     }
 
-    override fun showError(error: Throwable) {
-        error.localizedMessage?.let {
-            Toast.makeText(this, error.localizedMessage, Toast.LENGTH_LONG).show()
+    override fun showError(error: String) {
+        error.let {
+            Toast.makeText(this, error, Toast.LENGTH_LONG).show()
         }
     }
 
-    private val presenter by lazy { MainPresenter(this) }
+    private val presenter by lazy { MainPresenter(this, DataRepositoryImpl(), getMainDispetcher()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -14,3 +14,5 @@ expect object Log{
 }
 
 expect fun getMainDispetcher(): CoroutineDispatcher
+
+expect fun <T> runTest(block: suspend () -> T)

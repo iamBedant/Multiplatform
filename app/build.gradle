@@ -66,6 +66,7 @@ kotlin {
             dependencies {
         		implementation 'org.jetbrains.kotlin:kotlin-test-common'
         		implementation 'org.jetbrains.kotlin:kotlin-test-annotations-common'
+                implementation "io.mockk:mockk-common:1.8.13.kotlin13"
             }
         }
         androidMain {
@@ -80,6 +81,7 @@ kotlin {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-test'
                 implementation 'org.jetbrains.kotlin:kotlin-test-junit'
+                implementation "io.mockk:mockk:1.8.13.kotlin13"
             }
         }
         iosMain {
