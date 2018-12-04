@@ -1,13 +1,14 @@
 package sample.presentation
 
 import sample.*
-import sample.model.DataRepositoryImpl
 import kotlin.coroutines.CoroutineContext
 
 /**
  * Created by @iamBedant on 13/11/18.
  */
-class MainPresenter(private val view: MainView, private val repository: DataRepository, private val uiContext: CoroutineContext) {
+class MainPresenter(private val view: MainView,
+                    private val repository: DataRepository,
+                    private val uiContext: CoroutineContext = getMainDispetcher()) {
 
     fun loadData(userName: String) {
         if (userName.isNullOrEmpty()) {

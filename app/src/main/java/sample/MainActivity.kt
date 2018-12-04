@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), MainView {
         }
     }
 
-    private val presenter by lazy { MainPresenter(this, DataRepositoryImpl(), getMainDispetcher()) }
+    private val presenter by lazy { MainPresenter(this, DataRepositoryImpl()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
