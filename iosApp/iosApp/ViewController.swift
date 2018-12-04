@@ -20,7 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var userDetailsView: UIView!
     
     lazy var presenter : MainPresenter = {
-        MainPresenter(view: self)
+        MainPresenter(view: self,
+                      repository: DataRepositoryImpl(),
+                      uiContext:IosUtilities().getDispetcher()
+        )
     }()
     
     override func viewDidLoad() {
