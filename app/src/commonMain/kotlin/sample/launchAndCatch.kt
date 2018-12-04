@@ -9,7 +9,7 @@ import kotlin.coroutines.CoroutineContext
  */
 fun launchAndCatch(
     context: CoroutineContext,
-    onError: (Throwable) -> Unit,
+    onError: (String) -> Unit,
     function: suspend () -> Unit
 ): Finalizable {
     val ret = Finalizable()
@@ -17,7 +17,7 @@ fun launchAndCatch(
         try {
             function()
         } catch (e: Throwable) {
-            onError(e)
+            onError(e.message?: GENERIC_ERROR_MESSAGE)
         } finally {
             ret.onFinally?.invoke()
         }
