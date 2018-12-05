@@ -4,7 +4,6 @@ package sample
  * Created by @iamBedant on 04/12/18.
  */
 
-
 val allData = AllData(
     name = "TestName",
     avatar_url = "",
@@ -37,13 +36,4 @@ val allData = AllData(
     type = "",
     updated_at = "",
     url = ""
-)
-
-
-fun getDisplayData(allData : AllData) = DisplayData(
-    name = allData.name ?: allData.login,
-    publicGists = "${allData.public_gists} Public Gists",
-    publicRepos = "${allData.public_repos} Public Repos",
-    avatarUrl = allData.avatar_url ?: "https://api.adorable.io/avatars/285/abott@adorable.png",
-    bio = allData.bio ?: "No Bio Available"
 )
