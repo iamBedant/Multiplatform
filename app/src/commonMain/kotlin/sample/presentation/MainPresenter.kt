@@ -1,13 +1,14 @@
 package sample.presentation
 
 import sample.*
-import sample.model.DataRepositoryImpl
 import kotlin.coroutines.CoroutineContext
 
 /**
  * Created by @iamBedant on 13/11/18.
  */
-class MainPresenter(private val view: MainView, private val repository: DataRepository, private val uiContext: CoroutineContext) {
+class MainPresenter(private val view: MainView,
+                    private val repository: DataRepository,
+                    private val uiContext: CoroutineContext = getMainDispetcher()) {
 
     fun loadData(userName: String) {
         if (userName.isNullOrEmpty()) {
@@ -24,20 +25,20 @@ class MainPresenter(private val view: MainView, private val repository: DataRepo
     }
 
     private fun showData() {
-        val userInfo = repository.data
-
-        if (userInfo == null) {
-            Log.d("data is null")
-        }
-        userInfo?.let {
-            val displayData = DisplayData(
-                name = userInfo.name ?: userInfo.login,
-                publicGists = "${userInfo.public_gists} Public Gists",
-                publicRepos = "${userInfo.public_repos} Public Repos",
-                avatarUrl = userInfo.avatar_url ?: "https://api.adorable.io/avatars/285/abott@adorable.png",
-                bio = userInfo.bio ?: "No Bio Available"
-            )
-            view.displayData(displayData)
+         repository.data?.let {
+           view.displayData(getDisplayData(it))
         }
     }
+
+    /**
+     * Made this function internal to make it accessible while writing tests.
+     */
+
+    internal fun getDisplayData(allData : AllData) = DisplayData(
+        name = allData.name ?: allData.login,
+        publicGists = "${allData.public_gists} $PUBLIC_GISTS",
+        publicRepos = "${allData.public_repos} $PUBLIC_REPOS",
+        avatarUrl = allData.avatar_url ?: DEFAULT_AVATAR,
+        bio = allData.bio ?: NO_BIO_AVAILABLE
+    )
 }
