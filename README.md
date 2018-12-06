@@ -43,7 +43,7 @@ Replace `{your-username}` in `local.properties` with your actual username.
 * Select `app` configuration and hit `Run`. 
 
 ### iOS
-* Run `./gradlew run` on root directory.
+* Run `./gradlew build -x test` on root directory.
 * Open `iosApp` project in **Xcode**
 * Run the project.
 
