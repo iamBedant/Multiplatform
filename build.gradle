@@ -4,10 +4,11 @@ buildscript {
         jcenter()
         maven { url "https://kotlin.bintray.com/kotlinx" }
         maven { url 'https://dl.bintray.com/jetbrains/kotlin-native-dependencies' }
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-
+        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.squareup.sqldelight:gradle-plugin:1.0.0'
 
     }
 }

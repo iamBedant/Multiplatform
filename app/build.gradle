@@ -1,6 +1,6 @@
 plugins {
-    id 'kotlin-multiplatform' version '1.3.10'
-    id 'kotlinx-serialization' version '1.3.0'
+    id 'kotlin-multiplatform'
+    id 'kotlinx-serialization' version '1.3.21'
 }
 repositories {
     maven { url "https://kotlin.bintray.com/ktor" }
@@ -11,6 +11,10 @@ repositories {
 }
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "com.squareup.sqldelight"
+sqldelight {
+    packageName = "sample.db"
+}
 
 android {
     compileSdkVersion 28
@@ -36,11 +40,12 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
-    implementation "io.ktor:ktor-client-android:1.0.0-beta-4"
+    implementation "io.ktor:ktor-client-android:1.1.1"
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation 'com.android.support:design:28.0.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation "com.squareup.sqldelight:android-driver:1.0.0"
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 }
 
@@ -57,9 +62,9 @@ kotlin {
         commonMain {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
-                implementation "io.ktor:ktor-client:1.0.0-beta-4"
-                implementation "io.ktor:ktor-client-json:1.0.0-beta-4"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.9.0"
+                implementation "io.ktor:ktor-client-core:1.1.1"
+                implementation "io.ktor:ktor-client-json:1.1.1"
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.10.0"
             }
         }
         commonTest {
@@ -72,9 +77,9 @@ kotlin {
         androidMain {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib'
-                implementation "io.ktor:ktor-client-core-jvm:1.0.0-beta-4"
-                implementation "io.ktor:ktor-client-json-jvm:1.0.0-beta-4"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.0"
+//                implementation "io.ktor:ktor-client-core-jvm:1.0.0"
+//                implementation "io.ktor:ktor-client-json-jvm:1.0.0"
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0"
             }
         }
         androidTest {
@@ -86,11 +91,11 @@ kotlin {
         }
         iosMain {
             dependencies {
-                implementation "io.ktor:ktor-client-ios:1.0.0-beta-4"
-                implementation "io.ktor:ktor-client-core-ios:1.0.0-beta-4"
+                implementation "io.ktor:ktor-client-ios:1.1.1"
+                implementation "com.squareup.sqldelight:native-driver:1.0.0"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.0.1"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.0"
-                implementation "io.ktor:ktor-client-json-ios:1.0.0-beta-4"
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.10.0"
+                implementation "io.ktor:ktor-client-json-ios:1.1.1"
             }
         }
         iosTest {
