@@ -18,7 +18,7 @@ import sample.AllData
 class NetworkApi(private val endPoint: String) {
 
     private val httpClient = HttpClient {
-        install(JsonFeature){
+        install(JsonFeature) {
             serializer = KotlinxSerializer().apply {
                 setMapper(AllData::class, AllData.serializer())
             }
