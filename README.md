@@ -1,6 +1,8 @@
 
-# Kotlin Multiplatform Project (Android/ iOS)
-## \[ 🚧 Work in progress 👷‍♀️⛏👷🔧️👷🔧 🚧 \] 
+# Not in active development. Working on a private repository. Will update the link here as soon as it is ready.
+
+
+## Kotlin Multiplatform Project (Android/ iOS)
 
 Android           | iOS
 :-------------------------:|:-------------------------:
