@@ -1,6 +1,5 @@
 
-# Not in active development. Working on a private repository. Will update the link here as soon as it is ready.
-
+# Not in active development. Please follow this repository https://github.com/iamBedant/Multiplatform-Sample
 
 ## Kotlin Multiplatform Project (Android/ iOS)
 
